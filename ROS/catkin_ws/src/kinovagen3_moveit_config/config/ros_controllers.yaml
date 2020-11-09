@@ -22,8 +22,21 @@ hardware_interface:
 joint_state_controller:
   type: joint_state_controller/JointStateController
   publish_rate: 50
-controller_list:
-  []
+controller_list:  
+  - name: ""
+    action_ns: kinovagen3_unity_actionserver
+    type: FollowJointTrajectory
+    allowed_execution_duration_scaling: 10.0
+    allowed_goal_duration_margin: 10.0
+    default: true
+    joints:
+      - base_shoulder1
+      - shoulder1_halfarm1
+      - halfarm1_halfarm2
+      - halfarm2_forearm1
+      - forearm1_sphericalwrist1
+      - sphericalwrist1_sphericalwirst2    
+      - sphericalwrist2_eecoupler    
 arm_position_controller:
   type: position_controllers/JointPositionController
   joints:
