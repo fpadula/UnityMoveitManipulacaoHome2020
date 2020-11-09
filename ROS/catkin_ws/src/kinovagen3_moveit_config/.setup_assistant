@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: kinovagen3_description
+    relative_path: urdf/kinovagen3.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/kinovagen3.srdf
+  CONFIG:
+    author_name: Felipe Padula Sanches
+    author_email: felipe.padula@wr.sc.usp.br
+    generated_timestamp: 1604943717

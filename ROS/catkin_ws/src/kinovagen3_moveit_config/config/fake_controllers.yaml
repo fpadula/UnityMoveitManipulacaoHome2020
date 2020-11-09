@@ -1,0 +1,16 @@
+controller_list:
+  - name: fake_kinovagen3_arm_controller
+    joints:
+      - base_shoulder1
+      - shoulder1_halfarm1
+      - halfarm1_halfarm2
+      - halfarm2_forearm1
+      - forearm1_sphericalwrist1
+      - sphericalwrist1_sphericalwirst2
+      - sphericalwrist2_eecoupler
+  - name: fake_ee_controller
+    joints:
+      - sphericalwrist2_eecoupler
+initial:  # Define initial robot poses.
+  - group: kinovagen3_arm
+    pose: upright
