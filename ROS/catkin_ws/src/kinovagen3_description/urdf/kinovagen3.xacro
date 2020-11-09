@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="kinovagen3">
 
+    <!-- Joint 1 links and joint -->
     <link name="base">
         <visual>
             <geometry>
@@ -9,5 +10,137 @@
             <origin rpy="0 0 0" xyz="0 0 0"/>      
         </visual>
     </link>
+
+    <link name="shoulder1">
+        <visual>
+            <geometry>
+                <mesh filename="package://kinovagen3_description/meshes/Shoulder1.obj"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0 -0.156"/>
+        </visual>
+    </link>
+
+    <joint name="base_shoulder1" type="revolute">
+        <axis xyz="0 0 -1"/>
+        <limit effort="1000.0" lower="${-pi}" upper="${pi}" velocity="1.78"/>
+        <parent link="base"/>
+        <child link="shoulder1"/>
+        <origin rpy="0 0 0" xyz="0 0 0.156"/>
+    </joint>
+
+    <!-- Joint 2 link and joint -->
+
+    <link name="halfarm1">
+        <visual>
+            <geometry>
+                <mesh filename="package://kinovagen3_description/meshes/Halfarm1.obj"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0.005 -0.285"/>
+        </visual>
+    </link>
+
+    <joint name="shoulder1_halfarm1" type="revolute">
+        <axis xyz="0 1 0"/>
+        <limit effort="1000.0" lower="${-(126*pi)/180}" upper="${(126*pi)/180}" velocity="1.78"/>
+        <parent link="shoulder1"/>
+        <child link="halfarm1"/>
+        <origin rpy="0 0 0" xyz="0 -0.005 0.129"/>
+    </joint>
+
+    <!-- Joint 3 link and joint -->
+
+    <link name="halfarm2">
+        <visual>
+            <geometry>
+                <mesh filename="package://kinovagen3_description/meshes/Halfarm2.obj"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0.012 -0.495"/>
+        </visual>
+    </link>
+
+    <joint name="halfarm1_halfarm2" type="revolute">
+        <axis xyz="0 0 -1"/>
+        <limit effort="1000.0" lower="${-pi}" upper="${pi}" velocity="1.78"/>
+        <parent link="halfarm1"/>
+        <child link="halfarm2"/>
+        <origin rpy="0 0 0" xyz="0 -0.007 0.21"/>
+    </joint>
+
+    <!-- Joint 4 link and joint -->
+
+    <link name="forearm1">
+        <visual>
+            <geometry>
+                <mesh filename="package://kinovagen3_description/meshes/Forearm1.obj"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0.018 -0.706"/>
+        </visual>
+    </link>
+
+    <joint name="halfarm2_forearm1" type="revolute">
+        <axis xyz="0 1 0"/>
+        <limit effort="1000.0" lower="${-(147*pi)/180}" upper="${(147*pi)/180}" velocity="1.78"/>
+        <parent link="halfarm2"/>
+        <child link="forearm1"/>
+        <origin rpy="0 0 0" xyz="0 -0.006 0.211"/>
+    </joint>
+
+    <!-- Joint 5 link and joint -->
+
+    <link name="sphericalwrist1">
+        <visual>
+            <geometry>
+                <mesh filename="package://kinovagen3_description/meshes/Sphericalwrist1.obj"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0.025 -0.914"/>
+        </visual>
+    </link>
+
+    <joint name="forearm1_sphericalwrist1" type="revolute">
+        <axis xyz="0 0 -1"/>
+        <limit effort="1000.0" lower="${-pi}" upper="${pi}" velocity="1.78"/>
+        <parent link="forearm1"/>
+        <child link="sphericalwrist1"/>
+        <origin rpy="0 0 0" xyz="0 -0.007 0.208"/>
+    </joint>
+
+    <!-- Joint 6 link and joint -->
+
+    <link name="sphericalwrist2">
+        <visual>
+            <geometry>
+                <mesh filename="package://kinovagen3_description/meshes/Sphericalwrist2.obj"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0.025 -1.02"/>
+        </visual>
+    </link>
+
+    <joint name="sphericalwrist1_sphericalwirst2" type="revolute">
+        <axis xyz="0 1 0"/>
+        <limit effort="1000.0" lower="${-(117*pi)/180}" upper="${(117*pi)/180}" velocity="1.78"/>
+        <parent link="sphericalwrist1"/>
+        <child link="sphericalwrist2"/>
+        <origin rpy="0 0 0" xyz="0 0 0.106"/>
+    </joint>
+
+    <!-- Joint 7 link and joint -->
+
+    <link name="eecoupler">
+        <visual>
+            <geometry>
+                <mesh filename="package://kinovagen3_description/meshes/EECoupler.obj"/>
+            </geometry>
+            <origin rpy="0 0 0" xyz="0 0.025 -1.126"/>
+        </visual>
+    </link>
+
+    <joint name="sphericalwrist2_eecoupler" type="revolute">
+        <axis xyz="0 0 1"/>
+        <limit effort="1000.0" lower="${-pi}" upper="${pi}" velocity="1.78"/>
+        <parent link="sphericalwrist2"/>
+        <child link="eecoupler"/>
+        <origin rpy="0 0 0" xyz="0 0 0.106"/>
+    </joint>
+    
 
 </robot>
