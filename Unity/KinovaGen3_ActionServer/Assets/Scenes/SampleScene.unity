@@ -459,6 +459,7 @@ GameObject:
   - component: {fileID: 277241245911974127}
   - component: {fileID: 277241245911974126}
   - component: {fileID: 277241245911974125}
+  - component: {fileID: 277241245911974128}
   m_Layer: 0
   m_Name: EECoupler
   m_TagString: Untagged
@@ -531,6 +532,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &277241245911974128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277241245911974124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb9c325844fc803385dba1fe151a2c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  change_hj_target_angle: 0
+  reached_target_angle: 0
+  effort: 0
+  velocity: 0
+  angle: 0
+  target_angle: 0
+  error: 0
+  tol: 2
 --- !u!4 &833124316684758453
 Transform:
   m_ObjectHideFlags: 0
@@ -573,6 +594,7 @@ GameObject:
   - component: {fileID: 961887443383414646}
   - component: {fileID: 961887443383414648}
   - component: {fileID: 961887443383414647}
+  - component: {fileID: 961887443383414649}
   m_Layer: 0
   m_Name: Halfarm1
   m_TagString: Untagged
@@ -645,6 +667,26 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &961887443383414649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961887443383414645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb9c325844fc803385dba1fe151a2c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  change_hj_target_angle: 0
+  reached_target_angle: 0
+  effort: 0
+  velocity: 0
+  angle: 0
+  target_angle: 0
+  error: 0
+  tol: 2
 --- !u!1 &1083511021425324729
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,6 +701,7 @@ GameObject:
   - component: {fileID: 1083511021425324730}
   - component: {fileID: 1083511021425324732}
   - component: {fileID: 1083511021425324731}
+  - component: {fileID: 1083511021425324733}
   m_Layer: 0
   m_Name: Sphericalwrist1
   m_TagString: Untagged
@@ -731,6 +774,26 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1083511021425324733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083511021425324729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb9c325844fc803385dba1fe151a2c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  change_hj_target_angle: 0
+  reached_target_angle: 0
+  effort: 0
+  velocity: 0
+  angle: 0
+  target_angle: 0
+  error: 0
+  tol: 2
 --- !u!1 &1263432866539200919
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,6 +808,7 @@ GameObject:
   - component: {fileID: 1263432866539200920}
   - component: {fileID: 1263432866539200922}
   - component: {fileID: 1263432866539200921}
+  - component: {fileID: 1263432866539200923}
   m_Layer: 0
   m_Name: Forearm1
   m_TagString: Untagged
@@ -817,6 +881,26 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1263432866539200923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263432866539200919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb9c325844fc803385dba1fe151a2c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  change_hj_target_angle: 0
+  reached_target_angle: 0
+  effort: 0
+  velocity: 0
+  angle: 0
+  target_angle: 0
+  error: 0
+  tol: 2
 --- !u!33 &1738620224641755278
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -839,6 +923,7 @@ GameObject:
   - component: {fileID: 1859687192352998497}
   - component: {fileID: 1859687192352998499}
   - component: {fileID: 1859687192352998498}
+  - component: {fileID: 1859687192352998500}
   m_Layer: 0
   m_Name: Sphericalwrist2
   m_TagString: Untagged
@@ -911,6 +996,26 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1859687192352998500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859687192352998496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb9c325844fc803385dba1fe151a2c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  change_hj_target_angle: 0
+  reached_target_angle: 0
+  effort: 0
+  velocity: 0
+  angle: 0
+  target_angle: 0
+  error: 0
+  tol: 2
 --- !u!4 &2099256596460888559
 Transform:
   m_ObjectHideFlags: 0
@@ -1160,6 +1265,7 @@ GameObject:
   - component: {fileID: 5105513919117195226}
   - component: {fileID: 5105513919117195228}
   - component: {fileID: 5105513919117195227}
+  - component: {fileID: 5105513919117195229}
   m_Layer: 0
   m_Name: Halfarm2
   m_TagString: Untagged
@@ -1232,6 +1338,26 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &5105513919117195229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5105513919117195225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb9c325844fc803385dba1fe151a2c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  change_hj_target_angle: 0
+  reached_target_angle: 0
+  effort: 0
+  velocity: 0
+  angle: 0
+  target_angle: 0
+  error: 0
+  tol: 2
 --- !u!33 &5242595377024205842
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1385,6 +1511,7 @@ GameObject:
   - component: {fileID: 7406957869935258279}
   - component: {fileID: 7406957869935258281}
   - component: {fileID: 7406957869935258280}
+  - component: {fileID: 7406957869935258282}
   m_Layer: 0
   m_Name: Shoulder1
   m_TagString: Untagged
@@ -1457,6 +1584,26 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &7406957869935258282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7406957869935258278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb9c325844fc803385dba1fe151a2c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  change_hj_target_angle: 0
+  reached_target_angle: 0
+  effort: 0
+  velocity: 0
+  angle: 0
+  target_angle: 0
+  error: 0
+  tol: 2
 --- !u!4 &7472412811805226905
 Transform:
   m_ObjectHideFlags: 0
