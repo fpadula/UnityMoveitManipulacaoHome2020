@@ -223,6 +223,8 @@ GameObject:
   m_Component:
   - component: {fileID: 918386957}
   - component: {fileID: 918386958}
+  - component: {fileID: 918386960}
+  - component: {fileID: 918386959}
   m_Layer: 0
   m_Name: Arm
   m_TagString: Untagged
@@ -290,6 +292,36 @@ MonoBehaviour:
   - 0
   set_target_angles: 0
   joints_reached_target_position: 0
+--- !u!114 &918386959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918386956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ea9b909d84b63b0bbeeee6ec199be75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Topic: /joint_states
+  FrameId: Unity
+--- !u!114 &918386960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918386956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff98778ae051cfd40a6e4effdf851ebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SecondsTimeout: 10
+  Serializer: 0
+  protocol: 0
+  RosBridgeServerUrl: ws://172.17.0.2:9090
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
