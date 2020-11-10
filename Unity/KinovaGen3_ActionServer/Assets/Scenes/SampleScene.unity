@@ -222,6 +222,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 918386957}
+  - component: {fileID: 918386958}
   m_Layer: 0
   m_Name: Arm
   m_TagString: Untagged
@@ -251,6 +252,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &918386958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918386956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e8a7ef92738139b7ad7a9371dc312bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joint_names:
+  - base_shoulder1
+  - shoulder1_halfarm1
+  - halfarm1_halfarm2
+  - halfarm2_forearm1
+  - forearm1_sphericalwrist1
+  - sphericalwrist1_sphericalwirst2
+  - sphericalwrist2_eecoupler
+  manipulator_joints:
+  - {fileID: 7406957869935258282}
+  - {fileID: 961887443383414649}
+  - {fileID: 5105513919117195229}
+  - {fileID: 1263432866539200923}
+  - {fileID: 1083511021425324733}
+  - {fileID: 1859687192352998500}
+  - {fileID: 277241245911974128}
+  target_angles:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  set_target_angles: 0
+  joints_reached_target_position: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

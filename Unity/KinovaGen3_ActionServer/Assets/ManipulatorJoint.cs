@@ -51,12 +51,12 @@ public class ManipulatorJoint : MonoBehaviour{
     // fazermos essa alteração do ângulo alvo diretamente é devido
     // a uma proteção do Unity, que não permite que as variaveis da
     // engine sejam modificadas fora da thread principal
-    public void set_joint_angle(float angle){
+    public void Set_joint_angle(float angle){
         this.target_angle = angle;
         // Avisa ao script que queremos mudar o ângulo alvo da HingeJoint
         this.change_hj_target_angle = true;
     }
 
     // Retorna verdadeiro caso a junta tenha chegado à posição alvo
-    public bool joint_reached_target_position(){return this.reached_target_angle;}  
+    public bool Joint_reached_target_position(){return this.reached_target_angle;}  
 }
