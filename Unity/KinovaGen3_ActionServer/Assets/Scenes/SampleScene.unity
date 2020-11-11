@@ -225,6 +225,7 @@ GameObject:
   - component: {fileID: 918386958}
   - component: {fileID: 918386960}
   - component: {fileID: 918386959}
+  - component: {fileID: 918386961}
   m_Layer: 0
   m_Name: Arm
   m_TagString: Untagged
@@ -322,6 +323,21 @@ MonoBehaviour:
   Serializer: 0
   protocol: 0
   RosBridgeServerUrl: ws://172.17.0.2:9090
+--- !u!114 &918386961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918386956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e33f8d810ae9ea774b213d4fb0d33ed6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionName: kinovagen3_unity_actionserver
+  status: 
+  timeout_ms: 5000
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
