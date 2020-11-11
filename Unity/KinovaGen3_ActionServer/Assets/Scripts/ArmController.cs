@@ -43,9 +43,9 @@ public class ArmController : MonoBehaviour{
     // Seta o angulo de uma determinada junta baseada no seu nome. Recebemos um array double
     // pois as funções que usaremos no ROS usam, em sua maioria, estrutura do tipo double.
     // Tratar isso aqui, internamente, deixa o código mais limpo.
-    void Set_target_angles(string[] joint_names, double[] target_angles, bool in_rad){
+    public void Set_target_angles(string[] joint_names, double[] target_angles, bool in_rad){
         string name;
-        float target_angle;
+        float target_angle;        
         for (int i = 0; i < joint_names.Length; i++){
             name = joint_names[i];
             target_angle = (float)target_angles[i];
@@ -54,6 +54,7 @@ public class ArmController : MonoBehaviour{
                 target_angle = Mathf.Rad2Deg * target_angle;
             this.joints_dict[name].Set_joint_angle(target_angle);
         }
+        this.joints_reached_target_position = false;
     }
 
     // Se a flag set_target_angles for verdadeira, sobrescreve o angulo alvo das juntas (para fins de teste)
